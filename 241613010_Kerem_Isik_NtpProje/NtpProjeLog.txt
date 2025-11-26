@@ -109,3 +109,17 @@
 [26.11.2025 15:31:12] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
 [26.11.2025 15:31:16] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
 [26.11.2025 15:31:16] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:48:16] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:48:57] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:49:13] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:49:14] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:49:46] | INFO | Source:  | Message: Yeni çalışma eklendi: DDoS Saldırı Engelleme ve Trafik Analizi
+[26.11.2025 15:49:46] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:49:47] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:49:57] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:50:02] | INFO | Source:  | Message: Çalışma güncellendi. ID: 16, Başlık: DDoS Saldırı Engelleme ve Trafik Analizi
+[26.11.2025 15:50:02] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:50:04] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:50:08] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:50:08] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:50:16] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
