@@ -1,67 +1,84 @@
-# 🚀 Onject Oriented Programming Project: Fully Layered ASP.NET Web Forms Application
-## Final Project for Object-Oriented Programming Course
+# 🚀 Object Oriented Programming Project: Corporate Content Management System (CMS)
+### Object-Oriented Programming Course Final Project
 
-This project was developed to manage the backend of a corporate website, adhering to modern software engineering principles using a **4-Layer Architecture** and the **Entity Framework Code-First** approach.
+This project is a comprehensive ASP.NET Web Forms application developed to manage the content of a corporate website. It adheres to modern software engineering principles, utilizing a **4-Layer Architecture (N-Tier)** and **Entity Framework Code-First** approach.
 
----
-
-### 🌟 1. CORE TECHNOLOGIES
-
-| Technology | Version / Usage | Description |
-| :--- | :--- | :--- |
-| **Main Language** | C# (.NET Framework) | Coding of all business and data access logic. |
-| **Database** | SQL Server (LocalDb) | Data storage infrastructure. |
-| **ORM** | Entity Framework 6.x | Schema generation and data management via Code-First. |
-| **Interface (Web)** | ASP.NET Web Forms (.aspx) | User interface and Admin Panel. |
-| **Web API (Service)** | `NtpProje_Api` | Layer added to expose project data to the outside world. |
+Beyond basic CRUD operations, this project demonstrates advanced capabilities such as **Web API**, **Custom Logging**, **Reporting with Stored Procedures**, and **Design Patterns**.
 
 ---
 
-### 🧱 2. ARCHITECTURE AND DESIGN PATTERNS (ACADEMIC FOCUS)
+## 🌟 Key Features & Completed Tasks
 
-The project consists of four distinct layers to meet academic requirements.
+This project successfully meets **100%** of the academic and technical requirements:
 
-#### A. Layered Architecture
+- [x] **N-Layer Architecture:** Separated into Entities, DataAccess, Business, and Web layers.
+- [x] **Entity Framework Code-First:** Database schema managed via C# classes and Migrations.
+- [x] **Repository Design Pattern:** Centralized data access logic using a generic repository (`GenericRepository<T>`) to prevent code repetition.
+- [x] **Admin Panel:** Full CRUD (Create, Read, Update, Delete) pages for 9 different modules.
+- [x] **Logging System:** Critical operations and errors are recorded into a `.txt` file using a custom `FileLogger` service and can be viewed via the Admin Panel.
+- [x] **Reporting & Stored Procedures:** A visual report page using **Google Charts**, powered by a custom SQL Stored Procedure to calculate project distributions by category.
+- [x] **Web Service (API):** An **ASP.NET Web API 2** layer was added to expose project data (e.g., Sliders) to external systems in XML/JSON format.
+- [x] **Dynamic Frontend:** The entire public website (Home, About, Services, Portfolio, Contact) is dynamically driven by the database.
+
+---
+
+## 🏗️ Architecture
+
+The solution is divided into 4 main layers and 1 service layer to ensure maintainability and separation of concerns:
 
 | Layer | Project Name | Responsibility |
 | :--- | :--- | :--- |
-| **Entities** | `NtpProje_Entities` | Contains POCO (Plain Old CLR Object) classes representing database tables (`Slider`, `Portfolio`, `News`, etc.). |
-| **Data Access** | `NtpProje_DataAccess` | Includes the database context (`NtpProjeContext`) and the implementation of the **Repository Pattern**. |
-| **Business Logic** | `NtpProje_Business` | Houses business rules (Retrieve active items, Ordering, Validation) and Manager classes (`SliderManager`, `PortfolioManager`, etc.). |
-| **Web Interface** | `NtpProje_Web` | Contains Admin and Public Site interfaces (`.aspx`). Communicates only with the **Business** layer. |
-| **Web API (Service)** | `NtpProje_Api` | The layer added to expose project data via web services. |
-
-#### B. Design Pattern
-
-- **Repository Pattern:** Applied to the `DataAccess` layer. All CRUD (Create/Read/Update/Delete) operations are centralized in the **`GenericRepository<T>`** class. This prevents code repetition and ensures the business logic remains independent of data access technology.
+| **1. Entities** | `NtpProje_Entities` | Contains POCO classes representing database tables (e.g., `Slider`, `News`, `LogEntry`). |
+| **2. Data Access (DAL)** | `NtpProje_DataAccess` | Handles DB connections (`DbContext`), `Migrations`, `GenericRepository`, and `FileLogger`. |
+| **3. Business Logic (BLL)** | `NtpProje_Business` | Contains business rules, validation logic, and Manager classes (`SliderManager`, etc.). Logging integration resides here. |
+| **4. Web Interface** | `NtpProje_Web` | The User Interface for the Public Site (`.aspx`) and the Admin Panel (`/Admin`). |
+| **5. Service (API)** | `NtpProje_Api` | A RESTful service layer exposing data to external applications. |
 
 ---
 
-### 3. ADVANCED ACADEMIC REQUIREMENTS
+## 🛠️ Technologies Used
 
-This section demonstrates the project's use of advanced capabilities beyond basic CRUD.
-
-| Requirement | Implementation | Description |
-| :--- | :--- | :--- |
-| **Code-First & Migration** | Fully Implemented | DB schema managed via C#. New fields (`IsActive`, `Order`) were added to the database using Migrations. |
-| **Stored Procedure (SP) Usage** | Fully Implemented | SQL code for the project count report (`GetCategoryProjectCounts`) was sent to the database within a Migration. |
-| **Reporting** | Fully Implemented | An **Raporlar.aspx** page was added to the Admin Panel, retrieving data from the Stored Procedure and visualizing it (with `Google Charts`). |
-| **Admin Panel (CRUD)** | Fully Implemented | CRUD functionalities (**Add/Delete/Edit**) are available for all 9 entities (Slider, Portfolio, News, Team, About, Contact, etc.). |
-| **Web Service (API)** | Fully Implemented | The **`NtpProje_Api`** project was created. It serves active Slider data in **XML** or **JSON** format via the `/api/SliderApi` endpoint. |
+* **Language:** C# (.NET Framework 4.7.2)
+* **Web Technology:** ASP.NET Web Forms & ASP.NET Web API 2
+* **Database:** SQL Server (LocalDb)
+* **ORM:** Entity Framework 6 (Code-First)
+* **Visualization:** Google Charts (for Reporting)
+* **Logging:** Custom File-Based Logger
 
 ---
 
-### 4. SETUP AND RUNNING THE PROJECT
+## 🚀 Setup and Execution
 
-1.  **Open the Solution:** Open the `NtpProje.sln` file in Visual Studio.
-2.  **Ensure DLLs are Present:** Make sure all necessary NuGet packages (especially Entity Framework) are installed across the solution.
-3.  **Create the Database:** In the **Package Manager Console**, with `NtpProje_DataAccess` selected as the default project, run:
-    ```powershell
-    Update-Database
-    ```
-4.  **Populate Admin Data:** Set `NtpProje_Web` as the startup project and run it. Navigate to `Admin/AdminDefault.aspx` (or use the left menu) to enter necessary data (Sliders, Categories, About Content).
-5.  **Test the API:** Set `NtpProje_Api` as the startup project, run it, and check the `/api/SliderApi` address in the browser.
+Follow these steps to run the project on your local machine:
+
+1.  **Download:** Clone the repository or download the ZIP file.
+2.  **Open:** Open `NtpProje.sln` in Visual Studio.
+3.  **Create Database:**
+    * Open the **Package Manager Console** in Visual Studio.
+    * Set the **Default Project** to `NtpProje_DataAccess`.
+    * Run the command: `Update-Database`
+4.  **Run the Project:**
+    * **For the Website & Admin Panel:** Right-click `NtpProje_Web` and select "Set as Startup Project", then run (`F5`).
+    * **For the API:** Right-click `NtpProje_Api`, select "Set as Startup Project", run it, and navigate to `/api/SliderApi` in your browser.
 
 ---
-**Project Developer:** Kerem Işık
-**Date:** November 26, 2025
+
+## 📊 Admin Panel & Modules
+
+You can access the Admin Panel at: **`http://localhost:port/Admin/AdminDefault.aspx`**
+
+* **Content Management:** Sliders, News, Services, Portfolio, Categories.
+* **Corporate:** About Us, Team Members, Contact Information.
+* **Inbox:** View/Delete messages sent by visitors via the contact form.
+* **Reports:** Visual pie chart showing project distribution (Powered by Stored Procedure).
+* **System Logs:** A list of background operations and errors logged by the system.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.txt) file for details.
+
+---
+**Developer:** [Your Name Surname]
+**Date:** November 2025
