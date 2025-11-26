@@ -80,5 +80,5 @@ You can access the Admin Panel at: **`http://localhost:port/Admin/AdminDefault.a
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.txt) file for details.
 
 ---
-**Developer:** [Your Name Surname]
+**Developer:** Kerem Işık
 **Date:** November 2025
