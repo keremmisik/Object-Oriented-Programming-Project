@@ -133,9 +133,6 @@
     <Content Include="img\about\slide6.jpg" />
     <Content Include="img\about\support.png" />
     <Content Include="img\about\team1.jpg" />
-    <Content Include="img\about\team2.jpg" />
-    <Content Include="img\about\team3.jpg" />
-    <Content Include="img\about\team4.jpg" />
     <Content Include="img\about\testimon-1.jpg" />
     <Content Include="img\about\testimon-2.jpg" />
     <Content Include="img\about\testimon-3.jpg" />

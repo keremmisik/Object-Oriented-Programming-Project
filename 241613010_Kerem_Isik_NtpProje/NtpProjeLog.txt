@@ -7,3 +7,105 @@
 [26.11.2025 11:26:32] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
 [26.11.2025 11:26:36] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
 [26.11.2025 11:26:37] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 12:44:15] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 12:44:16] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 12:44:49] | INFO | Source:  | Message: Yeni Hakkımızda içeriği oluşturuldu.
+[26.11.2025 12:45:40] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 12:55:26] | INFO | Source:  | Message: Yeni ekip üyesi eklendi: Kerem Işık
+[26.11.2025 12:55:32] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 12:55:32] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 12:55:42] | INFO | Source:  | Message: Ekip üyesi silindi. ID: 2, İsim: Kerem Işık
+[26.11.2025 12:56:54] | INFO | Source:  | Message: Yeni ekip üyesi eklendi: Kerem Işık
+[26.11.2025 13:04:13] | INFO | Source:  | Message: Yeni ekip üyesi eklendi: Ayşe Yılmaz
+[26.11.2025 13:21:45] | INFO | Source:  | Message: Yeni ekip üyesi eklendi: Mehmet Demir
+[26.11.2025 13:22:26] | INFO | Source:  | Message: Yeni ekip üyesi eklendi: Ahmet Kaya
+[26.11.2025 13:34:03] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 13:34:03] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 13:34:28] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 13:34:28] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 13:34:33] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 13:34:33] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:11:52] | INFO | Source:  | Message: Yeni Slider eklendi. Başlık: Tehditleri Anında Durdurun
+[26.11.2025 14:11:57] | INFO | Source:  | Message: Slider güncellendi. ID: 1, Başlık: Dijital Kalkanınız
+[26.11.2025 14:11:59] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:11:59] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:12:23] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:12:26] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:12:28] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:12:35] | INFO | Source:  | Message: Çalışma silindi. ID: 12
+[26.11.2025 14:12:35] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:13:48] | INFO | Source:  | Message: Kategori silme başarılı. ID: 3
+[26.11.2025 14:13:58] | INFO | Source:  | Message: Yeni Kategori eklendi: Web Güvenliği
+[26.11.2025 14:14:07] | INFO | Source:  | Message: Yeni Kategori eklendi: Ağ Güvenliği
+[26.11.2025 14:14:13] | INFO | Source:  | Message: Yeni Kategori eklendi: Mobil Güvenlik
+[26.11.2025 14:14:15] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:18:24] | INFO | Source:  | Message: Yeni çalışma eklendi: Finansal Sistem Sızma Testi (Pentest)
+[26.11.2025 14:18:24] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:18:29] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:18:29] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:18:53] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:18:53] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:19:42] | INFO | Source:  | Message: Yeni çalışma eklendi: Kurumsal Ağ Güvenlik Duvarı Optimizasyonu
+[26.11.2025 14:19:42] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:19:44] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:19:44] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:20:42] | INFO | Source:  | Message: Yeni çalışma eklendi: E-Cüzdan Mobil Uygulama Güvenlik Analizi
+[26.11.2025 14:20:42] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:21:06] | INFO | Source:  | Message: Haber silindi. ID: 3, Başlık: Ümit’in Amını Patlatan Hacker Grubu Yakalandı… Ama Bu Sefer Gerçekten Patlattılar! 😭💥
+[26.11.2025 14:23:04] | INFO | Source:  | Message: Yeni haber eklendi: Yapay Zeka Destekli Oltalama (Phishing) Saldırılarında %300 Artış
+[26.11.2025 14:23:06] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:23:06] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:25:43] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:25:43] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:25:56] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:25:56] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:27:04] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:27:04] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:28:16] | INFO | Source:  | Message: Yeni haber eklendi: Global Lojistik Devine Fidye Yazılımı Şoku: Tedarik Zinciri Durdu
+[26.11.2025 14:29:11] | INFO | Source:  | Message: Yeni haber eklendi: Android Kullanıcıları Dikkat: Yeni "GoldDigger" Truva Atı Yüz Verilerini Çalıyor
+[26.11.2025 14:29:14] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:29:14] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:29:22] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:29:22] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:30:14] | INFO | Source:  | Message: Yeni haber eklendi: KVKK'dan Veri Güvenliği İçin Yeni Teknik Tedbirler Rehberi
+[26.11.2025 14:30:15] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:30:15] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:30:34] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:30:34] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:32:56] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:32:56] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:33:12] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:33:12] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:33:22] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 14:33:22] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:33:44] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 14:33:44] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 14:44:22] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:18:31] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:18:32] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:19:40] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 15:19:40] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:19:41] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:19:41] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:19:44] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 15:19:44] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:19:53] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:19:57] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:22:17] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:27:46] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 15:28:09] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:28:09] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:28:36] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:28:36] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:29:35] | INFO | Source:  | Message: Yeni hizmet eklendi: Sızma Testi (Pentest)
+[26.11.2025 15:29:59] | INFO | Source:  | Message: Yeni hizmet eklendi: 7/24 SOC İzleme
+[26.11.2025 15:30:11] | INFO | Source:  | Message: Yeni hizmet eklendi: Ağ ve Altyapı Güvenliği
+[26.11.2025 15:30:24] | INFO | Source:  | Message: Yeni hizmet eklendi: KVKK ve ISO 27001 Danışmanlığı
+[26.11.2025 15:30:41] | INFO | Source:  | Message: Yeni hizmet eklendi: Siber Olay Müdahalesi
+[26.11.2025 15:30:59] | INFO | Source:  | Message: Yeni hizmet eklendi: Kurumsal Farkındalık Eğitimleri
+[26.11.2025 15:31:01] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 15:31:01] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:31:12] | INFO | Source:  | Message: Aktif Kategoriler başarıyla getirildi.
+[26.11.2025 15:31:12] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 15:31:16] | INFO | Source:  | Message: Aktif Slider listesi başarıyla getirildi.
+[26.11.2025 15:31:16] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.

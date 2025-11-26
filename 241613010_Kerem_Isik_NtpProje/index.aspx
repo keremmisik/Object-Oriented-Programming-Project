@@ -1,6 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="_241613010_Kerem_Isik_NtpProje.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        /* Haber resimlerini sınırlandıran sınıf */
+        .news-img-fix {
+            width: 100%;        /* Genişlik kutuyu doldursun */
+            height: 200px;      /* Yükseklik SABİT olsun (İstediğin gibi artırabilirsin) */
+            object-fit: cover;  /* Resmi bozmadan/sündürmeden kutuya sığdır */
+            display: block;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- .top-shadow -->
@@ -43,9 +52,9 @@
 
                 <!-- .entry-note start -->
                 <section class="entry-note">
-                    <h1>Hoşgeldiniz, <span class='text-color'>Şirketinizin İsmi</span>. Açıklama gelecek bu alana...</h1>
+                    <h1>Hoşgeldiniz, <span class='text-color'>KISEC</span>. Siber Güvenlik</h1>
                     <p>
-                        Şirketinizi kısaca tanımlayan bir içerik gelecek bu alana şirketinizi kısaca tanımlayan bir açıklama gelecek bu alana şirketinizi kısaca tanımlayan bir açıklama gelecek bu alana...
+                        Dijital varlıklarınızı en gelişmiş tehditlere karşı koruyan, 7/24 proaktif savunma ve yeni nesil siber güvenlik çözümleri ortağınız.
                     </p>
                 </section>
                 <!-- entry-note end -->
@@ -120,7 +129,7 @@
                     <ItemTemplate>
                         <article class='<%# Container.ItemIndex % 2 == 0 ? "grid_6 alpha" : "grid_6 omega" %>'>
                             <section class="post-info">
-                                <img src='<%# Eval("ImagePath") %>' alt="blog-image" />
+                                <img src='<%# Eval("ImagePath") %>' alt="blog-image" class="news-img-fix" />
                             </section>
 
                             <section class="post-body">
