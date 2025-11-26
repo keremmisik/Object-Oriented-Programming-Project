@@ -91,6 +91,7 @@
     <Content Include="Admin\ServiceDuzenle.aspx" />
     <Content Include="Admin\ServiceEkle.aspx" />
     <Content Include="Admin\ServiceListele.aspx" />
+    <Content Include="Admin\SistemLoglari.aspx" />
     <Content Include="Admin\SliderDuzenle.aspx" />
     <Content Include="Admin\SliderEkle.aspx" />
     <Content Include="Admin\SliderListele.aspx" />
@@ -381,6 +382,13 @@
     </Compile>
     <Compile Include="Admin\ServiceListele.aspx.designer.cs">
       <DependentUpon>ServiceListele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SistemLoglari.aspx.cs">
+      <DependentUpon>SistemLoglari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SistemLoglari.aspx.designer.cs">
+      <DependentUpon>SistemLoglari.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SliderDuzenle.aspx.cs">
       <DependentUpon>SliderDuzenle.aspx</DependentUpon>

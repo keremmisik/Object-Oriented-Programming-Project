@@ -39,6 +39,7 @@
                 <a href="ServiceListele.aspx">⚙️ Hizmet Yönetimi</a>
                 <a href="TeamMemberListele.aspx">👥 Ekip Üyeleri</a>
                 <a href="Raporlar.aspx">📈 Raporlar (SP)</a>
+                <a href="SistemLoglari.aspx">📋 Sistem Logları</a>
 
                 <hr style="border-top: 1px solid #4a627a; margin: 10px 0;" />
 

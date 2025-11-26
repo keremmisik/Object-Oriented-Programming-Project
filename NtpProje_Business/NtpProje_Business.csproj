@@ -54,6 +54,7 @@
     <Compile Include="AboutManager.cs" />
     <Compile Include="CategoryManager.cs" />
     <Compile Include="ContactManager.cs" />
+    <Compile Include="LogManager.cs" />
     <Compile Include="NewsManager.cs" />
     <Compile Include="PortfolioManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

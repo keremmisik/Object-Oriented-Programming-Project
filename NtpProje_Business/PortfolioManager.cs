@@ -1,12 +1,14 @@
-﻿using System;
+﻿using NtpProje_DataAccess;
+using NtpProje_DataAccess.Concrete;
+using NtpProje_Data.Abstract;
+using NtpProje_Data.Concrete;
+using NtpProje_Entities;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity; // Include() metodu için bu gerekli!
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NtpProje_Entities;
-using NtpProje_DataAccess.Concrete;
-using NtpProje_DataAccess;
-using System.Data.Entity; // Include() metodu için bu gerekli!
 
 namespace NtpProje_Business
 {
@@ -15,51 +17,68 @@ namespace NtpProje_Business
         private readonly GenericRepository<portfolio> _portfolioRepository;
         private readonly NtpProjeContext _context;
 
+        // --- LOGLAMA DEĞİŞKENİ ---
+        private readonly ILogger _logger;
+
         public PortfolioManager()
         {
             _context = new NtpProjeContext();
             _portfolioRepository = new GenericRepository<portfolio>(_context);
+
+            // Loglama servisini başlatıyoruz
+            _logger = new FileLogger();
         }
 
         // --- ANA SİTE İÇİN GEREKLİ METOTLAR ---
 
-        /// <summary>
-        /// Sitede gösterilmek üzere AKTİF olan ve
-        /// Çalışma Tarihi'ne (WorkDate) göre en yeniden eskiye sıralanmış 
-        /// çalışmaları getirir.
-        /// </summary>
         public List<portfolio> GetActivePortfoliosOrderedByDate()
         {
-            // İş Kuralı: Aktif olanları getir ve tarihe göre tersten sırala.
-            var portfolioList = _portfolioRepository.GetList(p => p.IsActive == true);
-            return portfolioList.OrderByDescending(p => p.WorkDate).ToList();
+            try
+            {
+                var portfolioList = _portfolioRepository.GetList(p => p.IsActive == true);
+                return portfolioList.OrderByDescending(p => p.WorkDate).ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "PortfolioManager.GetActivePortfoliosOrderedByDate");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// "calismalarimiz.aspx" sayfasındaki gibi, 
-        /// Kategori bilgisiyle birlikte (Include) listeleme yapar.
-        /// </summary>
         public List<portfolio> GetActivePortfoliosWithCategory()
         {
-            // Repository'yi burada doğrudan kullanmıyoruz çünkü "Include"
-            // (ilişkili tabloyu çekme) işlemi yapacağız.
-            // Bu özel bir sorgu olduğu için context'i kullanmak daha iyidir.
-            return _context.Portfolios
-                           .Include(p => p.Category) // Kategori bilgisini de SQL'e dahil et
-                           .Where(p => p.IsActive == true)
-                           .OrderByDescending(p => p.WorkDate)
-                           .ToList();
+            try
+            {
+                // İlişkili verileri (Category) çektiğimiz kritik sorgu
+                var list = _context.Portfolios
+                                   .Include(p => p.Category)
+                                   .Where(p => p.IsActive == true)
+                                   .OrderByDescending(p => p.WorkDate)
+                                   .ToList();
+
+                _logger.LogInfo("Aktif çalışmalar (kategorileriyle) başarıyla listelendi.");
+                return list;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "PortfolioManager.GetActivePortfoliosWithCategory");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// "calismalarimiz_detay.aspx" sayfası için,
-        /// ID'ye göre tek bir çalışmayı Kategori bilgisiyle getirir.
-        /// </summary>
         public portfolio GetPortfolioByIdWithCategory(int id)
         {
-            return _context.Portfolios
-                           .Include(p => p.Category)
-                           .FirstOrDefault(p => p.PortfolioID == id);
+            try
+            {
+                return _context.Portfolios
+                               .Include(p => p.Category)
+                               .FirstOrDefault(p => p.PortfolioID == id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, $"PortfolioManager.GetPortfolioByIdWithCategory (ID: {id})");
+                throw;
+            }
         }
 
 
@@ -72,27 +91,52 @@ namespace NtpProje_Business
 
         public portfolio GetPortfolioById(int id)
         {
-            // Admin panelinde düzenleme yaparken Kategori bilgisi gerekmezse
-            // bu metot daha hızlı çalışır.
             return _portfolioRepository.GetById(id);
         }
 
         public void AddPortfolio(portfolio portfolio)
         {
-            _portfolioRepository.Add(portfolio);
+            try
+            {
+                _portfolioRepository.Add(portfolio);
+                _logger.LogInfo($"Yeni çalışma eklendi: {portfolio.Title}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "PortfolioManager.AddPortfolio");
+                throw;
+            }
         }
 
         public void UpdatePortfolio(portfolio portfolio)
         {
-            _portfolioRepository.Update(portfolio);
+            try
+            {
+                _portfolioRepository.Update(portfolio);
+                _logger.LogInfo($"Çalışma güncellendi. ID: {portfolio.PortfolioID}, Başlık: {portfolio.Title}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "PortfolioManager.UpdatePortfolio");
+                throw;
+            }
         }
 
         public void DeletePortfolio(int id)
         {
-            var portfolioToDelete = _portfolioRepository.GetById(id);
-            if (portfolioToDelete != null)
+            try
             {
-                _portfolioRepository.Delete(portfolioToDelete);
+                var portfolioToDelete = _portfolioRepository.GetById(id);
+                if (portfolioToDelete != null)
+                {
+                    _portfolioRepository.Delete(portfolioToDelete);
+                    _logger.LogInfo($"Çalışma silindi. ID: {id}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "PortfolioManager.DeletePortfolio");
+                throw;
             }
         }
     }

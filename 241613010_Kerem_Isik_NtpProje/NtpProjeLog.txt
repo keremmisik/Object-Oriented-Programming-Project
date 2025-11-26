@@ -1,0 +1,9 @@
+[26.11.2025 11:25:49] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 11:25:50] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 11:25:53] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 11:25:57] | INFO | Source:  | Message: Çalışma güncellendi. ID: 12, Başlık: Ümiti siktikk
+[26.11.2025 11:25:57] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 11:26:17] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 11:26:32] | INFO | Source:  | Message: Aktif çalışmalar (kategorileriyle) başarıyla listelendi.
+[26.11.2025 11:26:36] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.
+[26.11.2025 11:26:37] | INFO | Source:  | Message: SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.

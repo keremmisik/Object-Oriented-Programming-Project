@@ -52,7 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IGenericRepository.cs" />
+    <Compile Include="Abstract\ILogger.cs" />
+    <Compile Include="Concrete\FileLogger.cs" />
     <Compile Include="Concrete\GenericRepository.cs" />
+    <Compile Include="Concrete\LogRepository.cs" />
     <Compile Include="Migrations\202511061536257_InitialCreate.cs" />
     <Compile Include="Migrations\202511061536257_InitialCreate.Designer.cs">
       <DependentUpon>202511061536257_InitialCreate.cs</DependentUpon>

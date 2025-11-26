@@ -1,4 +1,6 @@
-﻿using NtpProje_DataAccess;
+﻿using NtpProje_Data.Abstract;
+using NtpProje_Data.Concrete;
+using NtpProje_DataAccess;
 using NtpProje_DataAccess.Concrete;
 using NtpProje_Entities;
 using NtpProje_Entity;
@@ -14,23 +16,30 @@ namespace NtpProje_Business
     {
         private readonly GenericRepository<Category> _categoryRepository;
         private readonly NtpProjeContext _context;
+        private readonly ILogger _logger; // Loglama değişkeni
 
         public CategoryManager()
         {
             _context = new NtpProjeContext();
             _categoryRepository = new GenericRepository<Category>(_context);
+            _logger = new FileLogger(); // Loglama servisi başlatılıyor
         }
 
         // --- ANA SİTE İÇİN GEREKLİ METOTLAR ---
 
-        /// <summary>
-        /// Sitede (örn: calismalarimiz.aspx filtresi) gösterilmek üzere 
-        /// AKTİF olan ve Sıra'ya göre dizilmiş kategorileri getirir.
-        /// </summary>
         public List<Category> GetActiveCategoriesOrdered()
         {
-            var categoryList = _categoryRepository.GetList(c => c.IsActive == true);
-            return categoryList.OrderBy(c => c.Order).ToList();
+            try
+            {
+                var categoryList = _categoryRepository.GetList(c => c.IsActive == true);
+                _logger.LogInfo("Aktif Kategoriler başarıyla getirildi.");
+                return categoryList.OrderBy(c => c.Order).ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "CategoryManager.GetActiveCategoriesOrdered");
+                throw;
+            }
         }
 
         // --- ADMİN PANELİ İÇİN GEREKLİ METOTLAR ---
@@ -47,31 +56,66 @@ namespace NtpProje_Business
 
         public void AddCategory(Category category)
         {
-            _categoryRepository.Add(category);
+            try
+            {
+                _categoryRepository.Add(category);
+                _logger.LogInfo($"Yeni Kategori eklendi: {category.CategoryName}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "CategoryManager.AddCategory");
+                throw;
+            }
         }
 
         public void UpdateCategory(Category category)
         {
-            _categoryRepository.Update(category);
+            try
+            {
+                _categoryRepository.Update(category);
+                _logger.LogInfo($"Kategori güncellendi. ID: {category.CategoryID}, Ad: {category.CategoryName}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "CategoryManager.UpdateCategory");
+                throw;
+            }
         }
 
         public void DeleteCategory(int id)
         {
-            var categoryToDelete = _categoryRepository.GetById(id);
-            if (categoryToDelete != null)
+            try
             {
-                _categoryRepository.Delete(categoryToDelete);
+                var categoryToDelete = _categoryRepository.GetById(id);
+                if (categoryToDelete != null)
+                {
+                    _categoryRepository.Delete(categoryToDelete);
+                    _logger.LogInfo($"Kategori silme başarılı. ID: {id}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "CategoryManager.DeleteCategory");
+                throw;
             }
         }
 
         // Raporlama için Stored Procedure çağırır
         public List<CategoryReportDto> GetCategoryProjectCounts()
         {
-            // Not: CategoryReportDto'nun altı kırmızı çizilirse, 
-            // en üste 'using NtpProje_Entities;' eklediğinden emin ol.
-            return _context.Database
-                           .SqlQuery<CategoryReportDto>("EXEC GetCategoryProjectCounts")
-                           .ToList();
+            try
+            {
+                var result = _context.Database
+                                   .SqlQuery<CategoryReportDto>("EXEC GetCategoryProjectCounts")
+                                   .ToList();
+                _logger.LogInfo("SP (GetCategoryProjectCounts) başarıyla çalıştırıldı.");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "CategoryManager.GetCategoryProjectCounts (SP Call)");
+                throw;
+            }
         }
     }
 }
